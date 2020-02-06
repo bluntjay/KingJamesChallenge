@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
 html,
 body {
   margin: 0 auto;
@@ -19,8 +21,15 @@ body a {
   box-sizing: border-box;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .topNav {
   width: 100vw;
+  transition: 0.3s ease;
+  color: #fff;
+  text-decoration: none;
 }
 
 .topNav a {
@@ -39,6 +48,8 @@ body a {
   color: #fff;
   font-size: 3.5em;
   text-decoration: none;
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
 }
 
 .topNav .icon {
@@ -49,6 +60,7 @@ body a {
   width: 100vw;
   background: #201728;
 }
+
 .navbar-collapse li {
   display: inline-flex;
   flex-direction: row;
@@ -115,22 +127,27 @@ body a {
     width: auto;
     padding: 0;
   }
+
   .header .topNav a {
     padding-left: 15%;
   }
+
   .header .headerBG {
     height: 100vh;
   }
+
   .header .headerLogo {
     width: 20%;
     left: 40%;
   }
+
   .header .headerArrow {
     height: 10%;
     position: absolute;
     top: 75%;
     left: 48%;
   }
+
   .header .aboutDiv {
     font-size: 2.8rem;
     background: #6F249B;
@@ -138,13 +155,6 @@ body a {
     z-index: 1;
     width: 50%;
     left: 25%;
-  }
-
-  .article1,
-.article2,
-.article3 {
-    width: auto;
-    height: auto;
   }
 }
 @media screen and (max-width: 600px) {
@@ -176,16 +186,32 @@ body a {
   .slide {
     width: auto;
     height: 250px;
-    position: absolute;
     left: 0;
+  }
+
+  .headerBG {
+    width: auto;
+  }
+
+  .headerLogo {
+    width: 70%;
+    left: 15%;
+  }
+
+  .articles {
+    flex-direction: column;
   }
 
   .headerArrow, .glyphArrow, .adWaveGlyph {
     display: none;
   }
 
+  .footer {
+    flex-direction: column;
+  }
+
   .footerDiv {
-    display: grid;
+    padding-bottom: 10%;
   }
 }
 .header {
@@ -196,11 +222,13 @@ body a {
   text-align: center;
   position: relative;
 }
+
 .header .headerBG {
   background: #201728;
   height: 105vh;
   width: 100vw;
 }
+
 .header .headerArrow {
   height: 15%;
   position: absolute;
@@ -220,7 +248,7 @@ body a {
   position: relative;
   width: 105vw;
   height: auto;
-  left: -25%;
+  left: -30%;
   margin-top: 5%;
   margin-left: 20%;
   margin-right: 20%;
@@ -228,6 +256,7 @@ body a {
   z-index: 1;
   padding: 5% 2% 5%;
 }
+
 .aboutDiv:before, .aboutDiv:after {
   width: 100vw;
   background: inherit;
@@ -240,6 +269,7 @@ body a {
   z-index: -1;
   -webkit-backface-visibility: hidden;
 }
+
 .aboutDiv:after {
   bottom: 0;
   transform: skewY(-2.5deg);
@@ -252,10 +282,12 @@ body a {
   z-index: 0;
   position: relative;
 }
+
 .adDiv h2 {
   margin-top: 10%;
   font-size: 3.6em;
 }
+
 .adDiv .aboutDiv {
   color: #fff;
   width: 105vw;
@@ -265,6 +297,7 @@ body a {
   padding: 20% 20px;
   text-align: center;
 }
+
 .adDiv .adWaveGlyph {
   position: absolute;
   top: 15%;
@@ -297,9 +330,11 @@ p {
   left: 40%;
   position: relative;
 }
+
 .buttons .aboutUs, .buttons .readMore {
   position: relative;
 }
+
 .buttons .aboutUs a, .buttons .readMore a {
   position: absolute;
   width: auto;
@@ -355,10 +390,12 @@ p {
   position: relative;
   z-index: 2;
 }
+
 .dataInfoDiv h2 {
   padding-top: 15%;
   font-size: 3.6em;
 }
+
 .dataInfoDiv .dataAna {
   height: 55%;
   width: 100%;
@@ -367,6 +404,7 @@ p {
   position: relative;
   top: -1px;
 }
+
 .dataInfoDiv .dataAna:before, .dataInfoDiv .dataAna:after {
   background: inherit;
   content: "";
@@ -377,22 +415,27 @@ p {
   right: 0;
   z-index: -1;
 }
+
 .dataInfoDiv .dataAna:before {
   top: -35px;
   transform: skewY(3deg);
   transform-origin: 100% 0;
 }
+
 .dataInfoDiv .dataAna h2 {
   font-size: 3.6em;
 }
+
 .dataInfoDiv .dataAna p {
   position: initial;
 }
+
 .dataInfoDiv .slide2 {
   width: 100vw;
   height: 470px;
   left: 0%;
 }
+
 .dataInfoDiv .adWaveGlyph {
   height: 10%;
   position: absolute;
@@ -400,6 +443,7 @@ p {
   left: 50%;
   z-index: 5;
 }
+
 .dataInfoDiv .xArrow {
   position: absolute;
   height: 15%;
@@ -426,6 +470,7 @@ p {
   position: relative;
   top: 10%;
 }
+
 .articles h3 {
   font-family: "Monserrat", serif;
   letter-spacing: 3px;
@@ -434,6 +479,7 @@ p {
   top: 60%;
   left: 5%;
 }
+
 .articles p {
   position: absolute;
   font-family: "Playfair Display", serif;
@@ -443,6 +489,7 @@ p {
   bottom: 70%;
   left: 10%;
 }
+
 .articles .artArrow {
   position: absolute;
   left: 65%;
@@ -456,6 +503,7 @@ p {
   padding: -2% -2% -2%;
   margin: 3%;
 }
+
 .article1 img, .article2 img, .article3 img {
   position: relative;
   top: 95%;
@@ -482,18 +530,21 @@ p {
   text-align: center;
   justify-content: center;
 }
+
 .footer .footerDiv {
   justify-content: center;
   text-align: center;
   padding-right: 5%;
   padding-left: 5%;
 }
+
 .footer h3 {
   text-shadow: 0px 1px 1px #dedede;
   letter-spacing: 2px;
   color: #fff;
   padding: 4% 6% 4%;
 }
+
 .footer p {
   font-size: 1.9em;
   padding: 5% 10% 5%;

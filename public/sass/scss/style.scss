@@ -27,14 +27,26 @@ h2, h3, p, a{
   box-sizing: border-box;
 }
 
-.topNav{
-  width: 100vw;
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+
+* {
+  box-sizing: border-box;
 }
+
+.topNav {
+  width: 100vw;
+  transition: 0.3s ease;
+  color: $white;
+  text-decoration: none;
+}
+
 .topNav a {
   float: left;
   display: block;
-  color: $white;
-  background: $darkPurple;
+  color: #fff;
+  background: #201728;
   text-decoration: none;
   font-size: 3em;
   padding-left: 6%;
@@ -42,37 +54,77 @@ h2, h3, p, a{
 }
 
 .topNav a:hover {
-  background-color: $purple;
-  color: $white;
+  background-color: #6F249B;
+  color: #fff;
   font-size: 3.5em;
   text-decoration: none;
+  border-top: 4px solid $white;
+  border-bottom: 4px solid $white;
 }
 
 .topNav .icon {
   display: none;
 }
-.navbar-collapse{
+
+.navbar-collapse {
   width: 100vw;
-  background: $darkPurple;
-  li{
+  background: #201728;
+}
+
+.navbar-collapse li {
   display: inline-flex;
   flex-direction: row;
   list-style: none;
   padding: 3% 5% 2%;
-  }
 }
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
 
 @media only screen and (max-width: 768px) {
   [class*="col-"] {
@@ -81,143 +133,173 @@ h2, h3, p, a{
 }
 
 @media (max-width: 320px) {
-  .header{
+  .header {
     height: 100vh;
     width: auto;
     padding: 0;
-    .topNav a{
-      padding-left: 15%;
-    }
-   .headerBG{
+  }
+
+  .header .topNav a {
+    padding-left: 15%;
+  }
+
+  .header .headerBG {
     height: 100vh;
-    }
-    .headerLogo{
-      width: 20%;
-      left: 40%;
-    }
-    .headerArrow{
+  }
+
+  .header .headerLogo {
+    width: 20%;
+    left: 40%;
+  }
+
+  .header .headerArrow {
     height: 10%;
     position: absolute;
     top: 75%;
     left: 48%;
-    }
-    .aboutDiv {
-    font-size: 2.8rem ;
+  }
+
+  .header .aboutDiv {
+    font-size: 2.8rem;
     background: #6F249B;
     position: relative;
     z-index: 1;
     width: 50%;
     left: 25%;
-    }
-    }
-    .article1,
-    .article2,
-    .article3{
-      width: auto;
-      height: auto;
-    }
   }
 
+
+}
+
 @media screen and (max-width: 600px) {
-  .topNav a:not(:first-child) {display: none;}
+  .topNav a:not(:first-child) {
+    display: none;
+  }
+
   .topNav a.icon {
     float: right;
     display: block;
   }
-  .topNav.responsive {position: relative;}
+
+  .topNav.responsive {
+    position: relative;
+  }
+
   .topNav.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+
   .topNav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
-  .slide{
+
+  .slide {
     width: auto;
     height: 250px;
-    position: absolute;
     left: 0;
   }
-  .headerArrow, .glyphArrow, .adWaveGlyph{
+  .headerBG{
+    width: auto;
+  }
+  .headerLogo{
+    width: 70%;
+    left: 15%;
+  }
+  .articles{
+    flex-direction: column;
+  }
+
+  .headerArrow, .glyphArrow, .adWaveGlyph {
     display: none;
   }
-  .footerDiv{
-    display: grid;
-  }
+  .footer{
+    flex-direction: column;
+ }
+ .footerDiv{
+  padding-bottom: 10%;
+ }
+  
 }
 
-
-.header{
-  background: $darkPurple;
+.header {
+  background: #201728;
   width: 100vw;
   height: 80vh;
   padding: 0;
   text-align: center;
   position: relative;
-.headerBG{
-  background: $darkPurple;
-  height: 105vh; 
-  width: 100vw;
+}
 
+.header .headerBG {
+  background: #201728;
+  height: 105vh;
+  width: 100vw;
 }
-.headerArrow{
-    height: 15%;
-    position: absolute;
-    top: 90%;
-    left: 48%;
+
+.header .headerArrow {
+  height: 15%;
+  position: absolute;
+  top: 90%;
+  left: 48%;
 }
-}
-.headerLogo{
-position: absolute;
+
+.headerLogo {
+  position: absolute;
   width: 30%;
   left: 35%;
-  top: 50%
+  top: 50%;
 }
+
 .aboutDiv {
-  background: $purple;
+  background: #6F249B;
   position: relative;
   width: 105vw;
   height: auto;
-  left: -25%;
+  left: -30%;
   margin-top: 5%;
   margin-left: 20%;
   margin-right: 20%;
   font-size: 2.3em;
   z-index: 1;
   padding: 5% 2% 5%;
-
-  &:before,
-  &:after {
-    width: 100vw;
-    background: inherit;
-    content: '';
-    display: block;
-    height: 50%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -1;
-    -webkit-backface-visibility: hidden; // for Chrome Windows
-  }
-  &:after {
-    bottom: 0;
-    transform: skewY(-2.5deg);
-    transform-origin: 100%;
-  }
 }
-.adDiv{
-  background: $darkPurple;
+
+.aboutDiv:before, .aboutDiv:after {
+  width: 100vw;
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+
+.aboutDiv:after {
+  bottom: 0;
+  transform: skewY(-2.5deg);
+  transform-origin: 100%;
+}
+
+.adDiv {
+  background: #201728;
   text-align: center;
   z-index: 0;
   position: relative;
-  h2{
-    margin-top: 10%;
-    font-size: 3.6em;
-  }
-.aboutDiv {
+}
+
+.adDiv h2 {
+  margin-top: 10%;
+  font-size: 3.6em;
+}
+
+.adDiv .aboutDiv {
   color: #fff;
   width: 105vw;
   position: absolute;
@@ -225,73 +307,79 @@ position: absolute;
   font-family: 'Playfair Display', sans-serif;
   padding: 20% 20px;
   text-align: center;
-  }
-  .adWaveGlyph{
-    position: absolute;
-    top: 15%;
-    left: 74%;
-    height: 20%;
-  }
-  
 }
-.adImg{
-  position:absolute; 
+
+.adDiv .adWaveGlyph {
+  position: absolute;
+  top: 15%;
+  left: 74%;
+  height: 20%;
+}
+
+.adImg {
+  position: absolute;
   z-index: -1;
   left: 50%;
 }
+
 p {
-    position: initial;
-    font-size: 1.5em;
-    font-weight: 100;
+  position: initial;
+  font-size: 1.5em;
+  font-weight: 100;
 }
 
-.buttons{
-  border: 2px solid $orange;
+.buttons {
+  border: 2px solid #CF1C55;
   background: transparent;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  color: $white;
+  color: #fff;
   padding: 2% 3% 2%;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 100;
   left: 40%;
   position: relative;
-  .aboutUs, .readMore{
-  position: relative;
-  
-  a {
-    position: absolute;
-    width: auto;
-    top: 0;
-    left: 45%;
-  }
+}
 
+.buttons .aboutUs, .buttons .readMore {
+  position: relative;
 }
+
+.buttons .aboutUs a, .buttons .readMore a {
+  position: absolute;
+  width: auto;
+  top: 0;
+  left: 45%;
 }
-  .rightArrow{
-    position: absolute;
-    left: 90%;
-    top: 35%;
-  }
+
+.rightArrow {
+  position: absolute;
+  left: 90%;
+  top: 35%;
+}
+
 .buttons {
   color: #fff;
   cursor: pointer;
   display: block;
   position: relative;
-  border: 2px solid $orange;
+  border: 2px solid #CF1C55;
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
+
 .buttons:hover {
   color: #000 !important;
   background-color: transparent;
   text-shadow: none;
 }
+
 .buttons:hover:before {
   bottom: 0%;
   top: auto;
   height: 100%;
 }
+
 .buttons:before {
   display: block;
   position: absolute;
@@ -302,160 +390,173 @@ p {
   z-index: -1;
   content: '';
   color: #000 !important;
-  background: $orange;
+  background: #CF1C55;
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
-.dataInfoDiv{
+.dataInfoDiv {
   text-align: center;
-  background: $purple;
+  background: #6F249B;
   justify-content: center;
   position: relative;
   z-index: 2;
-  h2{
-    padding-top: 15%;
-    font-size: 3.6em;
-  }
+}
 
-.dataAna{
+.dataInfoDiv h2 {
+  padding-top: 15%;
+  font-size: 3.6em;
+}
+
+.dataInfoDiv .dataAna {
   height: 55%;
   width: 100%;
   padding: 2px 3px 2px;
   z-index: 0;
   position: relative;
   top: -1px;
-  &:before,
-  &:after {
-    background: inherit;
-    content: "";
-    display: block;
-    height: auto;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -1;
-  }
-  &:before {
-    top: -35px;
-    transform: skewY(3deg);
-    transform-origin: 100% 0;
-  }
-  h2{
-    font-size: 3.6em;
-  }
-  p{
-    position: initial;
-  }
 }
-.slide2{
+
+.dataInfoDiv .dataAna:before, .dataInfoDiv .dataAna:after {
+  background: inherit;
+  content: "";
+  display: block;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+
+.dataInfoDiv .dataAna:before {
+  top: -35px;
+  transform: skewY(3deg);
+  transform-origin: 100% 0;
+}
+
+.dataInfoDiv .dataAna h2 {
+  font-size: 3.6em;
+}
+
+.dataInfoDiv .dataAna p {
+  position: initial;
+}
+
+.dataInfoDiv .slide2 {
   width: 100vw;
-  height: 470px ;
+  height: 470px;
   left: 0%;
 }
 
-.adWaveGlyph{
+.dataInfoDiv .adWaveGlyph {
   height: 10%;
   position: absolute;
   top: 30%;
   left: 50%;
   z-index: 5;
 }
-.xArrow{
+
+.dataInfoDiv .xArrow {
   position: absolute;
   height: 15%;
   left: 50%;
   top: 10%;
   margin-top: 5%;
 }
-}
-.adInfoDiv{
+
+.adInfoDiv {
   position: relative;
   bottom: 125px;
   z-index: 1;
 }
 
-.glyphArrow{
+.glyphArrow {
   position: absolute;
   top: 0%;
   left: 50%;
-  }
+}
 
-
-.articles{
+.articles {
   height: auto;
   display: flex;
   position: relative;
   top: 10%;
-  h3{
-    font-family: "Monserrat", serif;
-    letter-spacing: 3px;
-    font-size: 2.3em;
-    position: absolute;
-    top: 60%;
-    left: 5%
-
-  }
-  p{
-    position: absolute;
-    font-family: "Playfair Display", serif;
-    color: #CF1C55;
-    font-weight: 200;
-    font-size: 2.1em;
-    bottom: 70%;
-    left: 10%;
-  }
-  .artArrow{
-    position: absolute;
-    left: 65%;
-  }
 }
-.article1, .article2, .article3{
+
+.articles h3 {
+  font-family: "Monserrat", serif;
+  letter-spacing: 3px;
+  font-size: 2.3em;
+  position: absolute;
+  top: 60%;
+  left: 5%;
+}
+
+.articles p {
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  color: #CF1C55;
+  font-weight: 200;
+  font-size: 2.1em;
+  bottom: 70%;
+  left: 10%;
+}
+
+.articles .artArrow {
+  position: absolute;
+  left: 65%;
+}
+
+.article1, .article2, .article3 {
   position: relative;
   width: 50vw;
   height: 50vh;
   object-fit: fill;
   padding: -2% -2% -2%;
-  margin: 3% ;
-  img{
-    position: relative;
-    top: 95%;
-    left: 70%;
-  }
-}
-.article1{
-  background-image: $squareGrad;
-  }
-.article2{
-  background-image: $rectGrad;
-}
-.article3{
-  background-image: $circleGrad;
+  margin: 3%;
 }
 
-.footer{
+.article1 img, .article2 img, .article3 img {
+  position: relative;
+  top: 95%;
+  left: 70%;
+}
+
+.article1 {
+  background-image: url("../Images/bg-square-gradient.png");
+}
+
+.article2 {
+  background-image: url("../Images/bg-rectangle-gradient.png");
+}
+
+.article3 {
+  background-image: url("../Images/bg-circle-gradient.png");
+}
+
+.footer {
   height: auto;
   width: 100vw;
-  background: $darkPurple;
+  background: #201728;
   display: flex;
   text-align: center;
   justify-content: center;
-.footerDiv{
-    justify-content: center;
-    text-align: center;
-    padding-right: 5%;
-    padding-left: 5%;
-
 }
- h3{
-    text-shadow: 0px 1px 1px #dedede;
-    letter-spacing: 2px;
-    color: $white;
-    padding: 4% 6% 4%;
-  }
-  p{
-    font-size: 1.9em;
-   padding: 5% 10% 5%; 
-  }
 
+.footer .footerDiv {
+  justify-content: center;
+  text-align: center;
+  padding-right: 5%;
+  padding-left: 5%;
+}
 
+.footer h3 {
+  text-shadow: 0px 1px 1px #dedede;
+  letter-spacing: 2px;
+  color: #fff;
+  padding: 4% 6% 4%;
+}
+
+.footer p {
+  font-size: 1.9em;
+  padding: 5% 10% 5%;
 }
